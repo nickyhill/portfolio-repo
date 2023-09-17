@@ -1,12 +1,13 @@
 {
-  "description": "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.",
+  "description": "I am Virginia Tech student pursuing a degree in Computer Engineering with a major in Networking and Cybersecurity",
   "skills": [
-    "Web design",
-    "User experience",
-    "Inclusive design",
-    "Focus group testing",
-    "Mobile user interfaces",
-    "Graphic design"
+    "C++",
+    "Python",
+    "Embedded C",
+    "Basic Machine Learning",
+    "Data Flow Diagram",
+    "Create a threat model from the DFD along with a security policy",
+    "Learning: Xamarin Forms, Blazor, and GO"
   ],
-  "detailOrQuote": "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all."
+  "detailOrQuote": "I am passionate about solving problems and protecting individual's and company's data"
 }
