@@ -142,6 +142,18 @@ a:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
 }
 
+.education-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+  background-color: #f0f0f0; /* Background color for the container */
+  padding: 20px; /* Padding around the content inside the container */
+  border: 1px solid #ddd; /* Border around the container */
+  border-radius: 5px; /* Rounded corners for the container */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+}
+
 @media screen and (max-width: 420px) {
   .portfolio-container {
     flex-direction: column;
