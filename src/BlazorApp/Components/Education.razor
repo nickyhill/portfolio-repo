@@ -1,6 +1,35 @@
-<section class="light" id="portfolio">
+<section class="light" id="education">
     <h2>Education</h2>
-    <div>
-        <p> Virginia Tech</p>
-    </div>
+    @if (education is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div>
+            <p>@education.School</p>
+            <p>Grade: @education.Grade</p>
+            <p>Expected Graduation: @education.ExpectedGrad</p>
+            <p>Major: @education.Major</p>
+        </div>
+    }
 </section>
+
+
+@code {
+    [Parameter, EditorRequired]
+    public required HttpClient Http { get; set; }
+
+    [Parameter, EditorRequired]
+    public required HeroImageService HeroImageService { get; set; }
+
+    private EducationMe? education;
+    private HeroImage? hero;
+
+    protected override async Task OnInitializedAsync()
+    {
+        education = await Http.GetFromJsonAsync<EducationMe>("sample-data/education.json");
+        hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
+
+    }
+}
