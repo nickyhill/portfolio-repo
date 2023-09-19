@@ -1,21 +1,27 @@
+@inject IJSRuntime JSRuntime
+
+
 <section class="light" id="education">
-    <h2>Education</h2>
-    @if (education is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <div class="education-container">
-            <body >
-                <p>School: @education.School</p>
-                <p>Grade: @education.Grade</p>
-                <p>Expected Graduation: @education.ExpectedGrad</p>
-                <p>Major: @education.Major</p>
-            </body>
-            
-        </div>
-    }
+    <script src="/wwwroot/js/site.js"></script>
+    <h2 style="cursor: pointer;" @onclick="ToggleEducation">
+        Education <span id="arrow" style="font-weight: bold; font-size: 20px;">▶</span>
+    </h2>
+    <div class="education-container" style="display: none;">
+        @if (education is null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <ul style="list-style-type: none; text-align: left; columns: 1; font-size: 1.25rem; margin: 2rem 3rem; gap: 3rem;">
+                <li>School: @education.School</li>
+                <li>Grade: @education.Grade</li>
+                <li>Expected Graduation: @education.ExpectedGrad</li>
+                <li>Major: @education.Major</li>
+                <li>GPA: @education.GPA</li>
+            </ul>
+        }
+    </div>
 </section>
 
 
@@ -28,11 +34,16 @@
 
     private EducationMe? education;
     private HeroImage? hero;
+    private bool isEducationVisible = false;
 
     protected override async Task OnInitializedAsync()
     {
         education = await Http.GetFromJsonAsync<EducationMe>("sample-data/education.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
+    }
 
+    private async Task ToggleEducation()
+    {
+        await JSRuntime.InvokeVoidAsync("toggleEducation");
     }
 }

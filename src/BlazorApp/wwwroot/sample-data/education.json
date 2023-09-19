@@ -2,5 +2,6 @@
     "school": "Virginia Polytechnical Institue and State University",
     "grade" : "Senior",
     "expectedGrad" : "May 2024",
-    "major" : "Networking and Cybersecurity"
+    "major" : "Networking and Cybersecurity",
+    "gpa" : "3.48"
 }

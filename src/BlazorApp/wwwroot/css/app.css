@@ -143,13 +143,14 @@ a:hover {
 }
 
 .education-container {
-  text-align: center;
   display: flex;
   flex-direction: row;
   padding-top: 3rem;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
   background-color: #f0f0f0; /* Background color for the container */
-  padding: 20px; /* Padding around the content inside the container */
-  border: 1px solid #ddd; /* Border around the container */
+  padding: 200px; /* Padding around the content inside the container */
+  border: 2px solid #ddd; /* Border around the container */
   border-radius: 5px; /* Rounded corners for the container */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
 }
