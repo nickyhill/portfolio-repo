@@ -1,31 +1,34 @@
+@inject IJSRuntime JSRuntime
+
 <section class="light" id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-container">
-    @if (projects is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <div class="portfolio-hero">
-            @if (hero is not null)
-            {
-                <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;" 
-                    alt="@(hero.Alt)" />
-            }
-        </div>
-        <div class="container">
-            @foreach (var project in projects)
-            {
-                <div class="box" key="@project.Title">
-                    <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@project.Title</h3>
-                    </a>
-                    <p class="small">@project.Description</p>
-                </div>
-            }
-        </div>
-    }
+        @if (projects is null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <div class="container">
+                @foreach (var project in projects)
+                {
+                    <div class="project-container">
+                        <h3 style="cursor: pointer;" @onclick="TogglePortfolio">
+                            @project.Title
+                        </h3>
+                        <div class="box" key="@project.Title" style="display: none;">
+                            <div class="@(isExpanded ? "project-container-expanded" : "project-container")" @onclick="ExpandProject"> 
+                                <a href="@project.Url" target="_blank" rel="noopener noreferrer">
+                                <h3 style="flex-basis: 40px;">@project.Title</h3>
+                            </a>
+                            <p class="small">@project.Description</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                }
+            </div>
+        }
     </div>
 </section>
 
@@ -43,5 +46,16 @@
     {
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
+    }
+
+    private bool isExpanded = false;
+
+    private void ExpandProject()
+    {
+        isExpanded = !isExpanded;
+    }
+     private async Task TogglePortfolio()
+    {
+        await JSRuntime.InvokeVoidAsync("togglePortfolio");
     }
 }

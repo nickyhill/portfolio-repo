@@ -142,16 +142,38 @@ a:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
 }
 
+.project-container{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-container:hover {
+  background-color: #f0f0f0;
+}
+
+.project-container-expanded {
+  /* Styles for the expanded state */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .education-container {
   display: flex;
   flex-direction: row;
-  width : 200px;
-  height: 100px;
-  padding-top: 3rem;
-  justify-content: center; /* Horizontally center */
+  width : fit-content;
+  height: fit-content;
+  padding-top: 2rem;
+  justify-content: right; /* Horizontally center */
   align-items: center; /* Vertically center */
   background-color: #f0f0f0; /* Background color for the container */
-  padding: 20px; /* Padding around the content inside the container */
+  padding: 50px; /* Padding around the content inside the container */
   border: 2px solid #ddd; /* Border around the container */
   border-radius: 5px; /* Rounded corners for the container */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
