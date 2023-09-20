@@ -1,0 +1,20 @@
+[
+    {
+        "company": "OrbitalFire",
+        "position" : "Intern",
+        "timeframe" : "May 2022 - September 2022",
+        "description" : "Developed PowerShell scripts to help automate monthly processes"
+    },
+    {
+        "company": "BuildingFootprint USA",
+        "position" : "QC Intern",
+        "timeframe" : "June 2018 - December 2021",
+        "description" : "Ran quality control on geospatial data with ArcGIS"
+    },
+    {
+        "company": "City of Albany Department of Recreation",
+        "position" : "Lifeguard",
+        "timeframe" : "June 2017- June 2018",
+        "description" : "Held American Red Cross Lifesaving and CPR Certificates. While working, I was responsible for continual observation of the swimming area; maintenance of the pool area; and providing training and assistance to pool attendees if needed."
+    }
+]

@@ -173,10 +173,49 @@ a:hover {
   justify-content: right; /* Horizontally center */
   align-items: center; /* Vertically center */
   background-color: #f0f0f0; /* Background color for the container */
-  padding: 50px; /* Padding around the content inside the container */
+  padding: 10px; /* Padding around the content inside the container */
   border: 2px solid #ddd; /* Border around the container */
   border-radius: 5px; /* Rounded corners for the container */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+}
+
+.work-container {
+  display: flex;
+  flex-direction: row;
+  width : fit-content;
+  height: fit-content;
+  padding-top: 2em;
+  justify-content: right; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  background-color: #f0f0f0; /* Background color for the container */
+  padding: 10px; /* Padding around the content inside the container */
+  border: 2px solid #ddd; /* Border around the container */
+  border-radius: 5px; /* Rounded corners for the container */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+}
+
+.section-box {
+  border: 1px solid #ccc; /* Border color */
+  padding: 10px; /* Add padding to create space around the box */
+  margin: 20px 0; /* Add margin to create space between sections */
+  border-radius: 5px; /* Add rounded corners for a subtle look */
+  background-color: #f5f5f5; /* Background color for the box */
+}
+
+ul {
+  margin: 0; /* Remove margin from the unordered list */
+  padding: 0; /* Remove padding from the unordered list */
+}
+
+li {
+  margin: 0; /* Remove margin from list items */
+  padding: 0.5rem 0; /* Add padding to list items for spacing */
+}
+
+.sub-work-container {
+  margin: auto auto;
+  width : fit-content;
+  height: fit-content;
 }
 
 @media screen and (max-width: 420px) {
