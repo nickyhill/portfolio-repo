@@ -2,22 +2,17 @@
   {
     "title": "My Javascript games",
     "description": "Created multiple games coded in Javascript in P5.js",
-    "url": "/ScriptGames"
+    "url": "https://github.com/nickyhill/freeRoamingPacman-repo"
   },
   
   {
-    "title": "Web Development for Beginners",
-    "description": "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    "url": "https://github.com/microsoft/web-dev-for-beginners"
+    "title": "GO program for ICMP exfiltration",
+    "description": "Created a GO program to exfiltrate data through the ICMP protocol",
+    "url": ""
   },
   {
-    "title": "My Resume Site",
-    "description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    "url": "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website"
-  },
-  {
-    "title": "GitHub Codespaces and github.dev",
-    "description": "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    "url": "https://www.youtube.com/watch?v=c3hHhRME_XI"
+    "title": "Photography Account",
+    "description": "Love to take film pictures in my free time",
+    "url": "https://portfolio-upqhvjy.format.com/"
   }
 ]

@@ -1,0 +1,12 @@
+<section class="light @(isExpanded? "isexpanded": "")" id="javascriptgames">
+    <div>
+       <h1>Hello World</h1> 
+    </div>
+
+</section>
+
+
+@code{
+    [Parameter]
+    public bool isExpanded{get;set;}= true; // hide by default
+}

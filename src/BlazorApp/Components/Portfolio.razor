@@ -10,27 +10,33 @@
         else
         {
             <div class="container">
-                @foreach (var project in projects)
+                @foreach (var (project, index) in projects.Select((p, i) => (p, i)))
                 {
-                    <div class="project-container">
-                        <h3 style="cursor: pointer;" @onclick="TogglePortfolio">
+                <div class="project-container">
+                    @if (!isExpanded[index])
+                    {
+                        <h3 style="cursor: pointer;" @onclick="() => ToggleProject(index)">
                             @project.Title
                         </h3>
-                        <div class="box" key="@project.Title" style="display: none;">
-                            <div class="@(isExpanded ? "project-container-expanded" : "project-container")" @onclick="ExpandProject"> 
-                                <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                                <h3 style="flex-basis: 40px;">@project.Title</h3>
+                    }
+                
+                    <div class="box" style="display:@(isExpanded[index] ? "expanded" : "none");">
+                        <h3 style="flex-basis: 40px;" @onclick="() => ToggleProject(index)">
+                            @project.Title
+                        </h3>
+                        <p class="small">
+                            <a href="@project.Url" target="_blank" rel="noopener noreferrer">
+                                @project.Description
                             </a>
-                            <p class="small">@project.Description</p>
-                            </div>
-                           
-                        </div>
+                        </p>
                     </div>
+                </div>
                 }
             </div>
         }
     </div>
 </section>
+
 
 @code {
     [Parameter, EditorRequired]
@@ -41,21 +47,17 @@
 
     private List<Project>? projects;
     private HeroImage? hero;
+    private List<bool> isExpanded;
 
     protected override async Task OnInitializedAsync()
     {
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
+        isExpanded = Enumerable.Repeat(false, projects.Count).ToList();
     }
 
-    private bool isExpanded = false;
-
-    private void ExpandProject()
+    private void ToggleProject(int projectIndex)
     {
-        isExpanded = !isExpanded;
-    }
-     private async Task TogglePortfolio()
-    {
-        await JSRuntime.InvokeVoidAsync("togglePortfolio");
+        isExpanded[projectIndex] = !isExpanded[projectIndex];
     }
 }
