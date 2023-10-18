@@ -89,6 +89,13 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-weight: 400;
+  font-size: .50rem;
+  text-align: center;
+  margin: 0;
+}
+
 p {
   font-size: 18px;
   line-height: 1.5;

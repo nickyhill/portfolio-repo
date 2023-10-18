@@ -4,11 +4,10 @@
     "description": "Created multiple games coded in Javascript in P5.js",
     "url": "https://github.com/nickyhill/freeRoamingPacman-repo"
   },
-  
   {
-    "title": "GO program for ICMP exfiltration",
+    "title": "GO program for HTTP data exfiltration",
     "description": "Created a GO program to exfiltrate data through the ICMP protocol",
-    "url": ""
+    "url": "https://github.com/nickyhill/http-exfiltration"
   },
   {
     "title": "Photography Account",
