@@ -11,26 +11,20 @@
         else
         {
             <div class="container">
-                @foreach (var (project, index) in projects.Select((p, i) => (p, i)))
+                @foreach (var project in projects)
                 {
                 <div class="project-container">
-                    @if (!isExpanded[index])
-                    {
-                        <h3 style="cursor: pointer;" @onclick="() => ToggleProject(index)">
-                            @project.Title
-                        </h3>
-                    }
-                
-                    <div class="box" style="display:@(isExpanded[index] ? "expanded" : "none");">
-                        <h3 style="flex-basis: 40px;" @onclick="() => ToggleProject(index)">
-                            @project.Title
-                        </h3>
-                        <p class="small">
-                            <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                                @project.Description
-                            </a>
-                        </p>
-                    </div>
+                    
+                    <h3 style="cursor: pointer;" @onclick="() => ToggleProject(index)">
+                        @project.Title
+                    </h3>
+                    
+                    <p class="small">
+                        <a href="@project.Url" target="_blank" rel="noopener noreferrer">
+                            @project.Description
+                        </a>
+                    </p>
+                    
                 </div>
                 }
             </div>
