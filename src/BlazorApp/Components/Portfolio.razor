@@ -15,7 +15,7 @@
                 {
                 <div class="project-container">
                     
-                    <h3 style="cursor: pointer;" @onclick="() => ToggleProject(index)">
+                    <h3 style="cursor: pointer;">
                         @project.Title
                     </h3>
                     
@@ -42,7 +42,6 @@
 
     private List<Project>? projects;
     private HeroImage? hero;
-    private List<bool> isExpanded;
 
     protected override async Task OnInitializedAsync()
     {
