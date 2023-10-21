@@ -47,11 +47,5 @@
     {
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
-        isExpanded = Enumerable.Repeat(false, projects.Count).ToList();
-    }
-
-    private void ToggleProject(int projectIndex)
-    {
-        isExpanded[projectIndex] = !isExpanded[projectIndex];
     }
 }
