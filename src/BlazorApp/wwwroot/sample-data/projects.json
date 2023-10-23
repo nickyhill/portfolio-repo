@@ -6,7 +6,7 @@
   },
   {
     "title": "GO program for HTTP data exfiltration",
-    "description": "Created a GO program to exfiltrate data through the ICMP protocol",
+    "description": "Created a GO program to exfiltrate data through the HTTP",
     "url": "https://github.com/nickyhill/http-exfiltration"
   },
   {
