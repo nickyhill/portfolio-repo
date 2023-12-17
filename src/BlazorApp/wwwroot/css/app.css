@@ -142,26 +142,27 @@ a:hover {
   padding-top: 1.5rem;
 }
 
-projects-container {
+.projects-container {
   border-radius: 10px;
   padding: 24px 16px;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  flex-wrap: wrap; /* Allow projects to wrap to the next line */
+  justify-content: space-around; /* Adjust as needed */
   border: 1px solid rgb(204, 204, 204);
   text-align: center;
+  width: 100%; /* Set the container to full width */
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
-projects-container.container {
-  display: flex;
-  flex-direction: row;
-  padding-top: 1.5rem;
-}
-projects-container.container.subcontainer {
-  display: flex;
-  flex-direction: row;
-  padding-top: 1.5rem;
-}
+  .projects-container .subcontainer {
+    border: 2px solid black; /* Black border around each project */
+    border-radius: 10px;
+    margin: 10px; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+    width: calc(33.33% - 20px); /* Adjust for the desired number of projects per row */
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+
 
 .script-container {
   display: flex;
@@ -241,12 +242,12 @@ ul {
   padding: 0; /* Remove padding from the unordered list */
 }
 
-ul:before{
-  content:attr(aria-label);
-  font-size:120%;
-  font-weight:bold;
-  margin-left:-15px;
-}
+  ul:before{
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight:bold;
+    margin-left:-15px;
+  }
 
 li {
   margin: 0; /* Remove margin from list items */
