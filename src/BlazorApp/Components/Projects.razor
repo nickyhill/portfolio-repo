@@ -1,0 +1,50 @@
+@inject IJSRuntime JSRuntime
+
+<section class="light" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        @if (class_projects is null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <div class="container">
+                @foreach (var project in class_projects)
+                {
+                <div class="subcontainer">
+                    <h3 style="cursor: pointer;">
+                        @project.Title
+                    </h3>
+                    
+                    <p class="medium">
+                        <a>
+                            @project.Description
+                        </a>
+                    </p>
+                </div>  
+                }
+            </div>
+            
+        
+        }
+    </div>
+</section>
+
+
+@code {
+    [Parameter, EditorRequired]
+    public required HttpClient Http { get; set; }
+
+    [Parameter, EditorRequired]
+    public required HeroImageService HeroImageService { get; set; }
+
+    private List<ClassProjects>? class_projects;
+    private HeroImage? hero;
+
+    protected override async Task OnInitializedAsync()
+    {
+        class_projects = await Http.GetFromJsonAsync<List<ClassProjects>>("sample-data/classprojects.json");
+        hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
+    }
+}

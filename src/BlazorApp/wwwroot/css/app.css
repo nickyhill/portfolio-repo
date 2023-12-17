@@ -107,6 +107,10 @@ p.large {
   font-size: 24px;
 }
 
+p.medium {
+  font-size: 20px;
+}
+
 p.small {
   font-size: 15px;
 }
@@ -133,6 +137,27 @@ a:hover {
 }
 
 .portfolio-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+}
+
+projects-container {
+  border-radius: 10px;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid rgb(204, 204, 204);
+  text-align: center;
+}
+
+projects-container.container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+}
+projects-container.container.subcontainer {
   display: flex;
   flex-direction: row;
   padding-top: 1.5rem;
@@ -214,6 +239,13 @@ a:hover {
 ul {
   margin: 0; /* Remove margin from the unordered list */
   padding: 0; /* Remove padding from the unordered list */
+}
+
+ul:before{
+  content:attr(aria-label);
+  font-size:120%;
+  font-weight:bold;
+  margin-left:-15px;
 }
 
 li {
