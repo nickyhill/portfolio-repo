@@ -143,24 +143,23 @@ a:hover {
 }
 
 .projects-container {
-  border-radius: 10px;
   padding: 24px 16px;
   display: flex;
   flex-wrap: wrap; /* Allow projects to wrap to the next line */
   justify-content: space-around; /* Adjust as needed */
-  border: 1px solid rgb(204, 204, 204);
   text-align: center;
   width: 100%; /* Set the container to full width */
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
   .projects-container .subcontainer {
-    border: 2px solid black; /* Black border around each project */
+    border: 1px solid black; /* Black border around each project */
     border-radius: 10px;
     margin: 10px; /* Adjust as needed */
     padding: 10px; /* Adjust as needed */
     width: calc(33.33% - 20px); /* Adjust for the desired number of projects per row */
     box-sizing: border-box; /* Include padding and border in the width */
+    text-align: left;
   }
 
 
@@ -178,7 +177,7 @@ a:hover {
 .project-container{
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
 }

@@ -1,14 +1,14 @@
 [
     {
       "title": "Major Design Experience",
-      "description": "Major Design Experience is a two-semester capstone where I am assigned a team and we must create a solution to a problem that a customer has come to us to solve. The project my team and I were asigned was a software based project to produce a Software Bill of Materials. We broke the project up into three major subsystems; backend, frontend, and database. The backend deals with the extraction and collection of assets which then stores in a database that is used by the secure frontend to display specific information on a webserver. Me and another peer are tasked with the frontend development."
+      "description": "Major Design Experience is a two-semester capstone where I am assigned a team and we must create a solution to a problem that a customer has come to us to solve. The project my team and I were asigned was a software based project to produce a Software Bill of Materials. We broke the project up into three major subsystems; backend, frontend, and database. The backend deals with the extraction and collection of assets which then stores them in a database that is used by the secure frontend to display specific information on a webserver. Me and another peer are tasked with the frontend development."
     },
     {
       "title": "Sophmore Design",
       "description": "I designed, developed, and tested a Wireless Sensor Node for my sophomore design class. My partner and I were asked to create a totally isolated system that uses a DC/DC converter to boost a solar power input. Most importantly it transmits temperature data over Bluetooth to an app on a phone"
     },
     {
-      "title": "Photography Portfolio",
-      "description": "Love to take film pictures in my free time"
+      "title": "Locally-hosted Bitwarden Password Manger (Still in the works)",
+      "description": "I am going to create a Bitwarden password manager that is hosted on a Raspberry Pi. The IP address of the server will not be exposed publicly due to the use of Cloudflare tunnel which is basically a reverse proxy."
     }
   ]
