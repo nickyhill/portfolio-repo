@@ -8,7 +8,7 @@
       "description": "I designed, developed, and tested a Wireless Sensor Node for my sophomore design class. My partner and I were asked to create a totally isolated system that uses a DC/DC converter to boost a solar power input. Most importantly it transmits temperature data over Bluetooth to an app on a phone"
     },
     {
-      "title": "Locally-hosted Bitwarden Password Manger (Still in the works)",
-      "description": "I am going to create a Bitwarden password manager that is hosted on a Raspberry Pi. The IP address of the server will not be exposed publicly due to the use of Cloudflare tunnel which is basically a reverse proxy."
+      "title": "Locally-hosted Apache-Flask Web Application",
+      "description": "Designed a Dockerized Apache Http Server that host a Flask web application. The application is connected to a SQLite database within the docker container to store all relevant data."
     }
   ]
