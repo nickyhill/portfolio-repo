@@ -8,7 +8,7 @@
       "description": "I designed, developed, and tested a Wireless Sensor Node for my sophomore design class. My partner and I were asked to create a totally isolated system that uses a DC/DC converter to boost a solar power input. Most importantly it transmits temperature data over Bluetooth to an app on a phone"
     },
     {
-      "title": "Locally-hosted Apache-Flask Web Application",
-      "description": "Designed a Dockerized Apache Http Server that host a Flask web application. The application is connected to a SQLite database within the docker container to store all relevant data."
+      "title": "Locally-hosted Nginx-Flask Web Application",
+      "description": "Designed a Flask web application to display my roommates and my Nintendo Golf match history and statistics. The application is connected to a SQLite database that is accessed through an API I created for ease of use with in the flask application. Moreover, the webpage is only being served on my local network using nginx and gunicorn on my Raspberry Pi Zero"
     }
   ]

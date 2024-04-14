@@ -1,35 +1,26 @@
 @inject IJSRuntime JSRuntime
 
 <section class="light" id="portfolio">
-    <h2>Portfolio</h2>
-    <h4>(click the description to be brought to my repositories)</h4>
-    <div class="portfolio-container">
+    <h2>Portfolio Links</h2>
+
+    <div class="projects-container">
         @if (projects is null)
         {
             <p><em>Loading...</em></p>
         }
         else
         {
-            <div class="container">
                 @foreach (var project in projects)
                 {
-                <div class="project-container">
-                    
-                    <h3 style="cursor: pointer;">
-                        @project.Title
-                    </h3>
-                    
-                    <p class="small">
-                        <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                            @project.Description
-                        </a>
-                    </p>
-                    
-                </div>
+                <div class="subcontainer" style="text-align: center; justify-content: center; padding: 20px;">
+                    <a class="h3"style="cursor: pointer;" href="@project.Url" target="_blank"> @project.Title</a> 
+                </div>  
                 }
-            </div>
+            
+        
         }
     </div>
+
 </section>
 
 
