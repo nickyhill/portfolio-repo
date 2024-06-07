@@ -1,7 +1,8 @@
 {
-  "description": "I am a Virginia Tech student pursuing a degree in Computer Engineering with a major in Networking and Cybersecurity",
+  "description": "As a recent Networking and Cybersecurity graduate from Virginia Tech, I am passionate about leveraging technology to solve real-world problems and keep data safe. My educational background in Networking and Cybersecurity, combined with hands-on experience in a variety of roles, has equipped me with a versatile skill set in programming, web technologies, and system tools.\nI thrive on learning and mastering new skills, whether it is repairing cameras, developing full-stack applications on Raspberry Pi, or learning to develop and shoot film photography. My professional journey includes internships where I honed my abilities in geospatial data quality control and scripting automation, as well as a student employment role where I developed strong customer service and multitasking skills. \nMy projects reflect my dedication to practical application, innovation, and system security. From designing a Wireless Sensor Node to developing embedded systems projects on a Texas Instruments circuit board, I am constantly seeking opportunities to challenge myself and grow.",
   "skills": [
     "C++",
+    "C#",
     "Python",
     "Embedded C",
     "Linux",
@@ -12,7 +13,7 @@
     "SQL",
     "Knowledge of REST",
     "Data Flow Diagram",
-    "Blazor Framework",
+    "Blazor Framework (.NET)",
     "Javascript",
     "Can create a threat model from the DFD along with a security policy",
     "Learning: Xamarin Forms"
